@@ -29,7 +29,7 @@ function ListItem(props) {
         <div className="list-item">
             <h1>{props.title}</h1>
             <div className="description">{props.description}</div>
-            <div> <HyvorTalk.CommentCount id={props.hyvorTalkId} /> </div>
+            <div> <HyvorTalk.CommentCount websiteId={14} id={props.hyvorTalkId} /> </div>
         </div>
     )
 

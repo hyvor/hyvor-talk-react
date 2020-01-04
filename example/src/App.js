@@ -6,7 +6,7 @@ import Listing from './Listing.js'
 export default class App extends Component {
 
   state = {
-    section: 'blog'
+    section: 'listing'
   }
 
   activateBlog() {
