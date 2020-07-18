@@ -11,7 +11,11 @@ export default class Embed extends React.Component {
     window.HYVOR_TALK_CONFIG = {
       url: this.props.url || false,
       id: this.props.id || false,
-      loadMode: this.props.loadMode || 'default'
+      title: this.props.title || document.title,
+      loadMode: this.props.loadMode || 'default',
+      language: this.props.language || null,
+      sso: this.props.sso || null,
+      palette: this.props.palette || null
     }
   }
 
@@ -36,5 +40,9 @@ Embed.propTypes = {
   websiteId: PropTypes.number.isRequired,
   url: PropTypes.any,
   id: PropTypes.any,
-  loadMode: PropTypes.any
+  title: PropTypes.string,
+  loadMode: PropTypes.any,
+  language: PropTypes.string,
+  sso: PropTypes.object,
+  palette: PropTypes.object
 }
