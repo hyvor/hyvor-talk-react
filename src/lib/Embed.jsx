@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { addScript, removeScript } from './util'
 
@@ -26,7 +26,7 @@ export default function Embed(props){
             removeScript('ht-embed-script')
         }
         addScript('//talk.hyvor.com/web-api/embed', 'ht-embed-script')
-    });
+    },[]);
 
     return (<div id='hyvor-talk-view' />);
 }

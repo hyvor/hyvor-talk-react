@@ -1,34 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
 import BlogPage from './BlogPage.js'
 import Listing from './Listing.js'
 
-export default class App extends Component {
+export default function App(){
+    const [section, setSection] = useState('listing');
 
-  state = {
-    section: 'listing'
-  }
+    function activateBlog() {
+        setSection('blog')
+    }
+    function activateListing() {
+        setSection('listing')
+    }
 
-  activateBlog() {
-    this.setState({section: 'blog'})
-  }
-  activateListing() {
-    this.setState({section: 'listing'})
-  }
-
-
-
-  render () {
     return (
-      <div>
+        <div>
         <header>
-          <span onClick={() => this.activateListing()}>Listing</span>
-          <span onClick={() => this.activateBlog()}>Blog Page</span>
+            <span onClick={() => activateListing()}>Listing</span>
+            <span onClick={() => activateBlog()}>Blog Page</span>
         </header>
         { 
-          this.state.section === "blog" ? <BlogPage /> : <Listing />
+            section === "blog" ? <BlogPage /> : <Listing />
         }
-      </div>
+        </div>
     )
-  }
 }
