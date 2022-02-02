@@ -4,7 +4,7 @@ import { addScript, removeScript } from './util'
 
 export default function CommentCount(props){
     function setVariables(){
-        if (this.props.websiteId) {
+        if (props.websiteId) {
             window.HYVOR_TALK_WEBSITE = props.websiteId
         }
     }
@@ -21,7 +21,7 @@ export default function CommentCount(props){
     });
 
     return (
-        <span data-talk-id={this.props.id} mode={this.props.mode || 'default'} />
+        <span data-talk-id={props.id} mode={props.mode || 'default'} />
     );
 }
 
