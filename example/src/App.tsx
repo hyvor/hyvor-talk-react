@@ -2,27 +2,22 @@ import React, { useState } from 'react'
 
 import BlogPage from './BlogPage'
 import Listing from './Listing'
+import Palette from './Palette';
 
 export default function App() {
 
-    const [section, setSection] = useState('listing');
-
-    function activateBlog() {
-        setSection('blog')
-    }
-    function activateListing() {
-        setSection('listing')
-    }
+    const [section, setSection] = useState(<Listing />);
 
     return (
         <div>
         <header>
-            <span onClick={() => activateListing()}>Listing</span>
-            <span onClick={() => activateBlog()}>Blog Page</span>
+            <span onClick={() => setSection(<Listing />)}>Listing</span>
+            <span onClick={() => setSection(<BlogPage />)}>Blog Page</span>
+            <span onClick={() => setSection(<Palette />)}>Palette</span>
         </header>
-        { 
-            section === "blog" ? <BlogPage /> : <Listing />
-        }
+
+        { section }
+
         </div>
     )
 

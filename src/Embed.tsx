@@ -7,6 +7,7 @@ export interface EmbedProps {
     id?: number|string|false;
     title?: string;
     loadMode?: string;
+    clickId?: string;
     language?: string;
     sso?: object;
     palette?: object;
@@ -29,6 +30,7 @@ const Embed: React.FC<EmbedProps> = (
         id = false,
         title,
         loadMode,
+        clickId,
         language,
         sso,
         palette,
@@ -56,6 +58,7 @@ const Embed: React.FC<EmbedProps> = (
             id,
             title,
             loadMode,
+            clickId,
             language,
             sso,
             palette,
