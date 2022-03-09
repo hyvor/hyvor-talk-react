@@ -1,5 +1,5 @@
 import React from 'react';
-import HyvorTalk from 'hyvor-talk-react'
+import { CommentCount } from 'hyvor-talk-react'
 
 export default class BlogPage extends React.Component {
 
@@ -23,13 +23,13 @@ export default class BlogPage extends React.Component {
 
 }
 
-function ListItem(props) {
+function ListItem(props: any) {
 
     return (
         <div className="list-item">
             <h1>{props.title}</h1>
             <div className="description">{props.description}</div>
-            <div> <HyvorTalk.CommentCount websiteId={14} id={props.hyvorTalkId} /> </div>
+            <div> <CommentCount websiteId={14} id={props.hyvorTalkId} /> </div>
         </div>
     )
 
