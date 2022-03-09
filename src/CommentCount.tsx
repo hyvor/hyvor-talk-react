@@ -22,7 +22,7 @@ const CommentCount: React.FC<CommentCountProps> = ({
     language
 
 
-}) => {
+} : CommentCountProps) => {
 
     (window as any).HYVOR_TALK_WEBSITE = websiteId;
 

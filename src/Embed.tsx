@@ -3,8 +3,8 @@ import { addScript, removeScript, useUpdateEffect } from './util'
 
 export interface EmbedProps {
     websiteId: number;
-    url: string|false;
-    id: number|string|false;
+    url?: string|false;
+    id?: number|string|false;
     title?: string;
     loadMode?: string;
     language?: string;
