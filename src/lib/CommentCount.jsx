@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 import { addScript, removeScript } from './util'
 
 export default function CommentCount(props){
@@ -25,8 +24,8 @@ export default function CommentCount(props){
     );
 }
 
-CommentCount.propTypes = {
-    id: PropTypes.any,
-    mode: PropTypes.any,
-    websiteId: PropTypes.number
-}
+// CommentCount.propTypes = {
+//     id: PropTypes.any,
+//     mode: PropTypes.any,
+//     websiteId: PropTypes.number
+// }
