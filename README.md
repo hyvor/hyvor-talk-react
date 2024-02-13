@@ -1,3 +1,13 @@
+# Deprecated
+
+IMPORTANT ⛔️⛔️⛔️
+
+This library and Hyvor Talk version 2 are now deprecated. Migrate to the new library and Hyvor Talk version 3.
+
+- [ ] [New React Library](https://www.npmjs.com/package/@hyvor/hyvor-talk-react)
+- [ ] [Installation Docs](https://talk.hyvor.com/docs/platforms?platform=react)
+
+
 # Hyvor Talk - React
 
 > Add Hyvor Talk to React Apps
